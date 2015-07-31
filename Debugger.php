@@ -1,7 +1,5 @@
 <?php
 
-// written by Yohei Okubo Jul28 2015
-
 //------------------------------------------------
 // Debug mode
 define('DEBUG', 0); // 0: Production, 1: DebugMode
@@ -9,13 +7,9 @@ define('DEBUG', 0); // 0: Production, 1: DebugMode
 //-------------------------------------------------
 if (DEBUG == 1) { // debug
     ini_set( 'display_errors', 1);
-    //ini_set('log_errors','On');
-    // ログの保存先
     ini_set('error_log','../tmp/logs/debug_log');
 } elseif ( DEBUG == 0) { // production
-    // 本番環境ではログに記録する
     ini_set('log_errors','On');
-    // ログの保存先
     ini_set('error_log','../tmp/logs/error_log');
 }
 //------------------------------------------------
